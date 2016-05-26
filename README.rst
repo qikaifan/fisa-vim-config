@@ -1,3 +1,12 @@
+Quick Install
+-----------------------
+
+   ::
+    $ cd path/
+    $ curl -O https://raw.githubusercontent.com/wang1219/fisa-vim-config/master/install.sh
+    $ sudo chmod 744 install.sh
+    $ sh install.sh
+
 fisa-vim-config
 ===============
 
@@ -207,15 +216,6 @@ Most important features include:
 
 * **Paint css color** values with the actual color.
 
-Quick Install
------------------------
-
-```
-$ cd path/
-$ curl -O https://raw.githubusercontent.com/wang1219/fisa-vim-config/master/install.sh
-$ sudo chmod 744 install.sh
-$ sh install.sh
-```
 
 Super easy installation
 -----------------------
