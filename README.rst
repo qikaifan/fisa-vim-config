@@ -2,10 +2,11 @@ Quick Install
 -----------------------
 
    ::
-    $ cd path/
-    $ curl -O https://raw.githubusercontent.com/wang1219/fisa-vim-config/master/install.sh
-    $ sudo chmod 744 install.sh
-    $ sh install.sh
+
+      $ cd path/
+      $ curl -O https://raw.githubusercontent.com/wang1219/fisa-vim-config/master/install.sh
+      $ sudo chmod 744 install.sh
+      $ sh install.sh
 
 fisa-vim-config
 ===============
