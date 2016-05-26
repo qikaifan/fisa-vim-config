@@ -418,3 +418,33 @@ let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""新文件标题
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"新建*.py, *.sh文件 自动插入文件头
+"autocmd BufNewFile *.py,*.sh exec ":call SetFileTitle()"
+""定义函数Setfiletitle
+func SetFileTitle()
+    if &filetype == 'sh'
+        call setline(1,"\#!/bin/bash")
+        call append(line("."), "\#")
+    elseif &filetype == 'python'
+        call setline(1, "\# -*- coding: utf-8 -*- ")
+        call append(line("."), "\#")
+        call append(line(".")+1, "\# Copyright @ 2015 OPS, Qunar Inc. (qunar.com)")
+        call append(line(".")+2, "\#")
+        call append(line(".")+3, "\# Author: wangyangyang.wang <wangyangyang.wang@qunar.com>")
+    else
+        call setline(1, "/*************************************************************************") 
+        call append(line("."), "> File Name: ".expand("%"))  
+        call append(line(".")+1, "> Author: ") 
+        call append(line(".")+2, "> Mail: ") 
+        call append(line(".")+3, "> Created Time: ".strftime(       "%c")) 
+        call append(line(".")+4, " ************************************************************************/") 
+        call append(line(".")+5, "")
+    endif
+    " 新建文件后自动定位到文件尾
+endfunc
+autocmd BufNewFile * normal G
