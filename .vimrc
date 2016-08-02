@@ -28,6 +28,9 @@ Bundle 'gmarik/vundle'
 " Active plugins
 " You can disable or add new ones here:
 
+" Plugin for GO in tools if required
+" Plugin 'fatih/vim-go'
+
 " Plugins from github repos:
 
 " Python and PHP Debugger
