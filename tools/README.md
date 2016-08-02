@@ -15,8 +15,9 @@ This is a plugin that  just for GO language. If use, just:
     * insert a line `Plugin 'fatih/vim-go'` to  `~/.vimrc` 
 
 ## The last 
+--------------------
    
    ::
      
-     BundleInstall
+       :BundleInstall
 
