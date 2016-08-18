@@ -123,6 +123,9 @@ endif
 filetype plugin on
 filetype indent on
 
+" if use mouse 
+set mouse=a
+
 " tabs and spaces handling
 set expandtab
 set tabstop=4
