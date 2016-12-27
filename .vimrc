@@ -172,6 +172,13 @@ imap <M-Left> <ESC><c-w>h
 imap <M-Up> <ESC><c-w>k
 imap <M-Down> <ESC><c-w>j
 
+
+" Smart way to move between windows
+map <silent> <C-j> <C-W>j
+map <silent> <C-k> <C-W>k
+map <silent> <C-h> <C-W>h
+map <silent> <C-l> <C-W>l
+
 " old autocomplete keyboard shortcut
 imap <C-J> <C-X><C-O>
 
@@ -430,7 +437,7 @@ let g:airline#extensions#whitespace#enabled = 0
 """""""""新文件标题
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "新建*.py, *.sh文件 自动插入文件头
-"autocmd BufNewFile *.py,*.sh exec ":call SetFileTitle()"
+autocmd BufNewFile *.py,*.sh exec ":call SetFileTitle()"
 ""定义函数Setfiletitle
 func SetFileTitle()
     if &filetype == 'sh'
